@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claysys Login page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+         background-image: url(./bg1.jpg);
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat; 
+        height: 100vh;
+        margin: 0; 
+        font-family: Arial, sans-serif; 
+}
+    
+    .container {
+        padding: 150px;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        border: #333;
+        border-width: 100px;
+        
+    }
+    
+    h1 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 40px;
+        padding-top: 10px;
+      
+    }
+    
+   
+    .card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: auto;
+    }
+    
+    .card input[type="email"],
+    .card input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+    
+    .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    .options label , .signup{
+        font-size: 20px;
+        color: #555;
+    }
+    
+    .options a {
+        font-size: 20px;
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .options a:hover {
+        text-decoration: underline;
+    }
+    
+    .card button {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .card button:hover {
+        background-color: #0056b3;
+    }
+    input.invalid, textarea.invalid, select.invalid {
+    border-color: red;
+    border-width: 4px;
+}
+
+
+input.valid, textarea.valid, select.valid {
+    border-color: green;
+    border-width: 4px;
+    
+}
+    </style>
+</head>
+
+<header>
+    <img src="claysys-logo.png" alt="Website Logo">
+    <h1>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="login.html">Sign in</a>
+        <a href="form.html">Sign up</a>
+        <a href="contact.html">Contact us</a>
+    </h1>
+</header>
+<body>
+    
+    <div class="container">
+        
+        <h1>Sign in </h1>
+        <div class="card">
+            <input type="email" placeholder="Email Address">
+            <br><br>
+            <input type="password" placeholder="Password">
+            <br><br>
+            <div class="options">
+                <div>
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <div>
+                <a href="#">Forgot password?</a>
+            </div>
+            </div>
+            <br>
+            <button type="submit">Login</button>
+            <br><br>
+            <div class="signup">
+                <label for="Not a member?">Not a member?</label>
+                <a href="form.html">Signup now</a>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-column">
+        <h3>About ClaySys</h3>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="#">Robotic Process Automation</a></li>
+            <li><a href="#">AI as a Service</a></li>
+            <li><a href="#">Mobile Application Development</a></li>
+            <li><a href="#">Custom Software Development</a></li>
+            <li><a href="#">Android App Development</a></li>
+            <li><a href="#">iOS App Development</a></li>
+            <li><a href="#">Cross Platform App Development Service</a></li>
+            <li><a href="#">SharePoint Development</a></li>
+            <li><a href="#">Salesforce Development</a></li>
+            <li><a href="#">WordPress Web Development Services</a></li>
+            <li><a href="#">Sitecore Development</a></li>
+            <li><a href="#">Azure Consulting Services</a></li>
+            <li><a href="#">Office 365 Consulting Services</a></li>
+            <li><a href="#">ServiceNow Consulting and Development</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+            <li><a href="#">AppForms</a></li>
+            <li><a href="#">RPA Genie</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Quick Contacts</h3>
+        <div class="contact-info">
+            <p>USA Office</p>
+            <p>1234 Elm Street, Anytown, CA 12345</p>
+            <p>Phone: +1 (800) 123-4567</p>
+            <p>Email: <a href="mailto:info@claysys.com">info@claysys.com</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <a href="#">Terms of Use</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Sitemap</a>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const loginButton = document.querySelector('button[type="submit"]');
+        const emailInput = document.querySelector('input[type="email"]');
+        const passwordInput = document.querySelector('input[type="password"]');
+        const rememberCheckbox = document.querySelector('#remember');
+
+        const validUsers = {
+            "suvinkumar2808@gmail.com": "Password@123",
+            "suvinkumarparamasivam@gmail.com": "Password@123"
+        };
+
+        const setBorderColor = (element, isValid) => {
+            element.style.border = isValid ? "2px solid green" : "2px solid red";
+        };
+
+        loginButton.addEventListener('click', (event) => {
+            event.preventDefault(); 
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+            const rememberMe = rememberCheckbox.checked;
+
+            let isEmailValid = email in validUsers;
+            let isPasswordValid = isEmailValid && validUsers[email] === password;
+
+            
+            setBorderColor(emailInput, isEmailValid);
+            setBorderColor(passwordInput, isPasswordValid);
+
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            if (isEmailValid && isPasswordValid) {
+                alert(`Login successful! Remember Me: ${rememberMe}`);
+            } else {
+                alert('Invalid email or password');
+            }
+        });
+
+        
+        emailInput.addEventListener('input', () => {
+            const isValid = emailInput.value.trim() in validUsers;
+            setBorderColor(emailInput, isValid);
+        });
+
+        passwordInput.addEventListener('input', () => {
+            const isValid = validUsers[emailInput.value.trim()] === passwordInput.value.trim();
+            setBorderColor(passwordInput, isValid);
+        });
+    });
+</script>
+
+</body>
+</html>

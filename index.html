@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider {
+            display: flex;
+            width: 100%;
+            animation: slide 10s infinite linear;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 600px;
+            flex-shrink: 0;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            95% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="claysys-logo.png" alt="Website Logo">
+        <h1>
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="login.html">Sign in</a>
+            <a href="form.html">Sign up</a>
+            <a href="contact.html">Contact us</a>
+        </h1>
+    </header>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="cl1.jpg" alt="Image 1">
+            <img src="cl2.jpg" alt="Image 2">
+            <img src="claysysteam.jpg" alt="Image 3">
+            <img src="cl3.jpg" alt="Image 4">
+            <img src="cl4.jpg" alt="Image 5">
+            <img src="cl5.jpg" alt="Image 6">
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>About ClaySys</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Robotic Process Automation</a></li>
+                <li><a href="#">AI as a Service</a></li>
+                <li><a href="#">Mobile Application Development</a></li>
+                <li><a href="#">Custom Software Development</a></li>
+                <li><a href="#">Android App Development</a></li>
+                <li><a href="#">iOS App Development</a></li>
+                <li><a href="#">Cross Platform App Development Service</a></li>
+                <li><a href="#">SharePoint Development</a></li>
+                <li><a href="#">Salesforce Development</a></li>
+                <li><a href="#">WordPress Web Development Services</a></li>
+                <li><a href="#">Sitecore Development</a></li>
+                <li><a href="#">Azure Consulting Services</a></li>
+                <li><a href="#">Office 365 Consulting Services</a></li>
+                <li><a href="#">ServiceNow Consulting and Development</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">AppForms</a></li>
+                <li><a href="#">RPA Genie</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Contacts</h3>
+            <div class="contact-info">
+                <p>USA Office</p>
+                <p>1234 Elm Street, Anytown, CA 12345</p>
+                <p>Phone: +1 (800) 123-4567</p>
+                <p>Email: <a href="mailto:info@claysys.com">info@claysys.com</a></p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <a href="#">Terms of Use</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Sitemap</a>
+    </div>
+</body>
+</html>

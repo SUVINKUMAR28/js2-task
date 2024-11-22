@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claysys Form Page</title>
+    <style>
+        body {
+            background-image: url(./bg1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150vh;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 7px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Validation Styles */
+        input.invalid, textarea.invalid, select.invalid {
+            border-color: red;
+            border-width: 4px;
+        }
+
+        input.valid, textarea.valid, select.valid {
+            border-color: green;
+            border-width: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="claysys-logo.png" alt="Website Logo">
+        <h1>
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="login.html">Sign in</a>
+            <a href="form.html">Sign up</a>
+            <a href="contact.html">Contact us</a>
+        </h1>
+    </header>
+    <big>
+        <center>
+            <h1 style="color: white;">Sign up</h1>
+            <form action="" method="GET" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td><label for="Firstname">First name:</label></td>
+                        <td><input type="text" name="Firstname" id="Firstname" placeholder="Firstname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Lastname">Last name:</label></td>
+                        <td><input type="text" name="Lastname" id="Lastname" placeholder="Lastname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date of birth:</label></td>
+                        <td><input type="date" name="dob" id="dob"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age:</label></td>
+                        <td><input type="number" name="age" id="age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phno">Phone number:</label></td>
+                        <td><input type="tel" name="phno" id="phno"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Password">Password:</label></td>
+                        <td><input type="password" name="Password" id="Password" minlength="8" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cPassword">Confirm password:</label></td>
+                        <td><input type="password" name="cPassword" id="cPassword" minlength="8" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button type="submit" onclick="validateForm(event)">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <label for="account">Already have an account?</label>
+                <a href="login.html" onclick="redirectToLogin(event)">Sign in now</a>
+            </form>
+        </center>
+    </big>
+    <footer class="footer">
+        <p>Footer Content Here</p>
+    </footer>
+
+    <script>
+        // Function to validate the form on submit
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const inputs = document.querySelectorAll('input, textarea, select');
+            let isValidForm = true;
+
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValidForm = false;
+                    input.classList.add('invalid');
+                    input.classList.remove('valid');
+                } else {
+                    input.classList.add('valid');
+                    input.classList.remove('invalid');
+                }
+            });
+
+            // Password confirmation check
+            const password = document.getElementById('Password').value;
+            const confirmPassword = document.getElementById('cPassword').value;
+            if (password !== confirmPassword) {
+                isValidForm = false;
+                alert("Passwords do not match!");
+                document.getElementById('cPassword').classList.add('invalid');
+            }
+
+            if (isValidForm) {
+                alert("Form submitted successfully!");
+                // Uncomment the next line to enable form submission
+                // document.querySelector('form').submit();
+            } else {
+                alert("Please fix the errors in the form.");
+            }
+        }
+
+        // Function to confirm navigation
+        function redirectToLogin(event) {
+            event.preventDefault(); // Prevent navigation
+            if (confirm("Do you want to navigate to the Sign In page?")) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+</html>

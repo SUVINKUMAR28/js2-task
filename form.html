@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claysys Form Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    background-image: url(./bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 7px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 20px;
+    /* color: #333; */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Gender Selection Styles */
+.gender {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+}
+
+.gender input[type="radio"] {
+    margin-right: 1px;
+}
+
+.gender label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 7px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+input.invalid, textarea.invalid, select.invalid {
+    border-color: red;
+    border-width: 4px;
+}
+
+input.valid, textarea.valid, select.valid {
+    border-color: green;
+    border-width: 4px;
+    
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <img src="claysys-logo.png" alt="Website Logo">
+        <h1>
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="login.html">Sign in</a>
+            <a href="form.html">Sign up</a>
+            <a href="contact.html">Contact us</a>
+        </h1>
+    </header>
+    <big><center>
+        <h1 style="color: white;">Sign up</h1>
+        <form action="" method="GET" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="Firstname">First name:</label></td>
+                    <td><input type="text" name="Firstname" id="Firstname" placeholder="Firstname" size="10" maxlength="20" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Lastname">Last name:</label></td>
+                    <td><input type="text" name="Lastname" id="Lastname" placeholder="Lastname" size="10" maxlength="20" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of birth:</label></td>
+                    <td><input type="date" name="dob" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" name="age" id="age"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Gender:</label></td>
+                    <td>
+                        <div class="gender" >
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="Not to perfer" value="Not to perfer">
+                        <label for="Not to perfer">Not to perfer</label>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="phno">Phone number:</label></td>
+                    <td><input type="tel" name="phno" id="phno"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="add">Address:</label></td>
+                    <td><textarea name="add" id="add" cols="30" rows="3" placeholder="Type address"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label></td>
+                    <td>
+                        <select id="state" name="state">
+                            <option value="">Select state</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Karnataka">Karnataka</option>
+                        </select>
+                    </td>
+                </tr>
+        
+                
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td>
+                        <select id="city" name="city" disabled>
+                            <option value="">Select city</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" name="username" id="username" placeholder="Username" size="10" maxlength="20" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Password">Password:</label></td>
+                    <td><input type="password" name="Password" id="Password" placeholder="Password" minlength="8" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cPassword">Confirm password:</label></td>
+                    <td><input type="password" name="cPassword" id="cPassword" placeholder="Confirm Password" minlength="8" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit">Submit</button>
+                        
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <label for="account">Already have a account</label>
+                <a href="login.html">Sign in now</a>
+        </form>
+    </center></big>
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>About ClaySys</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Robotic Process Automation</a></li>
+                <li><a href="#">AI as a Service</a></li>
+                <li><a href="#">Mobile Application Development</a></li>
+                <li><a href="#">Custom Software Development</a></li>
+                <li><a href="#">Android App Development</a></li>
+                <li><a href="#">iOS App Development</a></li>
+                <li><a href="#">Cross Platform App Development Service</a></li>
+                <li><a href="#">SharePoint Development</a></li>
+                <li><a href="#">Salesforce Development</a></li>
+                <li><a href="#">WordPress Web Development Services</a></li>
+                <li><a href="#">Sitecore Development</a></li>
+                <li><a href="#">Azure Consulting Services</a></li>
+                <li><a href="#">Office 365 Consulting Services</a></li>
+                <li><a href="#">ServiceNow Consulting and Development</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">AppForms</a></li>
+                <li><a href="#">RPA Genie</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Contacts</h3>
+            <div class="contact-info">
+                <p>USA Office</p>
+                <p>1234 Elm Street, Anytown, CA 12345</p>
+                <p>Phone: +1 (800) 123-4567</p>
+                <p>Email: <a href="mailto:info@claysys.com">info@claysys.com</a></p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <a href="#">Terms of Use</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Sitemap</a>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const inputs = document.querySelectorAll('input, textarea, select');
+        const dobInput = document.getElementById('dob');
+        const ageInput = document.getElementById('age');
+        const stateSelect = document.getElementById('state');
+        const citySelect = document.getElementById('city');
+        const passwordField = document.getElementById('Password');
+        const confirmPasswordField = document.getElementById('cPassword');
+        const firstnameField = document.getElementById('Firstname');
+        const lastnameField = document.getElementById('Lastname');
+        const phoneField = document.getElementById('phno');
+        const emailField = document.getElementById('email');
+    
+        const citiesByState = {
+            "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Salem"],
+            "Kerala": ["Kochi", "Trivandrum", "Kozhikode", "Kollam"],
+            "Karnataka": ["Bangalore", "Mysore", "Hubli", "Mangalore"]
+        };
+    
+        const setValidationClass = (element, isValid) => {
+            if (isValid) {
+                element.classList.add('valid');
+                element.classList.remove('invalid');
+            } else {
+                element.classList.add('invalid');
+                element.classList.remove('valid');
+            }
+        };
+    
+        // Set max attribute to today's date for dobInput
+        if (dobInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dobInput.setAttribute('max', today);
+        }
+    
+        // Event Listeners for Validation
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                switch (input.type) {
+                    case 'text':
+                        setValidationClass(input, input.value.trim() !== '');
+                        break;
+                    case 'email':
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        setValidationClass(input, emailRegex.test(input.value));
+                        break;
+                    case 'tel':
+                        const phoneRegex = /^\d{10}$/;
+                        setValidationClass(input, phoneRegex.test(input.value));
+                        break;
+                    case 'password':
+                        const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+                        setValidationClass(input, passwordRegex.test(input.value));
+                        break;
+                    case 'date':
+                        const today = new Date();
+                        const dob = new Date(input.value);
+                        const age = today.getFullYear() - dob.getFullYear();
+                        const monthDiff = today.getMonth() - dob.getMonth();
+                        const dayDiff = today.getDate() - dob.getDate();
+                        const isValid =
+                            age > 18 ||
+                            (age === 18 && (monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0)));
+                        setValidationClass(input, isValid);
+                        break;
+                    case 'select-one':
+                        setValidationClass(input, input.value !== '');
+                        break;
+                    default:
+                        setValidationClass(input, input.value.trim() !== '');
+                }
+            });
+        });
+    
+        // DOB Validation and Age Calculation
+        dobInput?.addEventListener('input', () => {
+            const dob = new Date(dobInput.value);
+            const today = new Date();
+            const age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+            const dayDiff = today.getDate() - dob.getDate();
+    
+            const isValid = dobInput.value && (age > 18 || (age === 18 && monthDiff >= 0 && dayDiff >= 0));
+            setValidationClass(dobInput, isValid);
+    
+            if (ageInput) {
+                ageInput.value = age;
+            }
+    
+            if (age < 18) {
+                dobInput.setCustomValidity("You must be at least 18 years old");
+            } else {
+                dobInput.setCustomValidity(""); // Remove custom validity error
+            }
+        });
+    
+        // Other Event Listeners
+        ageInput?.addEventListener('input', () => {
+            const ageValue = parseInt(ageInput.value, 10);
+            setValidationClass(ageInput, ageValue >= 18);
+        });
+    
+        passwordField?.addEventListener('input', () => {
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            setValidationClass(passwordField, passwordRegex.test(passwordField.value));
+        });
+    
+        confirmPasswordField?.addEventListener('input', () => {
+            setValidationClass(confirmPasswordField, passwordField.value === confirmPasswordField.value);
+        });
+    
+        phoneField?.addEventListener('input', () => {
+            const phoneRegex = /^\d{10}$/;
+            setValidationClass(phoneField, phoneRegex.test(phoneField.value));
+        });
+    
+        emailField?.addEventListener('input', () => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            setValidationClass(emailField, emailRegex.test(emailField.value));
+        });
+    
+        firstnameField?.addEventListener('input', () => {
+            const nameRegex = /^[A-Za-z]+$/;
+            setValidationClass(firstnameField, nameRegex.test(firstnameField.value));
+        });
+    
+        lastnameField?.addEventListener('input', () => {
+            const nameRegex = /^[A-Za-z]+$/;
+            setValidationClass(lastnameField, nameRegex.test(lastnameField.value));
+        });
+    
+        stateSelect?.addEventListener('change', () => {
+            const selectedState = stateSelect.value;
+            setValidationClass(stateSelect, selectedState !== '');
+    
+            if (selectedState && citiesByState[selectedState]) {
+                citySelect.disabled = false;
+                citySelect.innerHTML = '';
+    
+                const defaultOption = document.createElement('option');
+                defaultOption.textContent = 'Select City';
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                citySelect.appendChild(defaultOption);
+    
+                citiesByState[selectedState].forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            } else {
+                citySelect.disabled = true;
+                setValidationClass(citySelect, false);
+            }
+        });
+    
+        citySelect?.addEventListener('change', () => {
+            setValidationClass(citySelect, citySelect.value !== '');
+        });
+    });
+</script>    
+        
+</body>
+</html>
